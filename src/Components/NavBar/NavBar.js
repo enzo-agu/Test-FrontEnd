@@ -2,25 +2,21 @@ import Cardwidget from "../CardWidget/Cardwiget"
 import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
-import Button from 'react-bootstrap/Button'
-
+import './NavBar.css'
 const NavBar = () => {
-    return (<>
 
+    return (<>
+        <div className="CardWidget">
+            <h2 className="titleCardWidget">Corebiz</h2>
+            <Cardwidget />
+        </div>
         <Navbar bg="dark" variant="dark">
             <Container>
                 <Nav className="me-auto">
-                    <Button className="btn-light active" >Home</Button>
-                    <Button className="btn-light active">
-                        Deutsch beer
-                    </Button>
-                    
                 </Nav>
-                <Cardwidget />
             </Container>
         </Navbar>
     </>
     )
 }
-
 export default NavBar

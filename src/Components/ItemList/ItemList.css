@@ -1,0 +1,14 @@
+.boxProducts {
+    display: inline-block;
+    margin: 40px 0px 0px 40px;
+    border: solid 2px gray;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .boxProducts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}

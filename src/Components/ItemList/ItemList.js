@@ -1,36 +1,25 @@
-
-
 import Button from "react-bootstrap/Button";
 import { useState } from "react"
-import { Link } from "react-router-dom";
-import Card from "react-bootstrap/Card"
-// import ItemCount from "../ItemCount/ItemCount"
-// import "./ItemList.css"
+import { useContext } from "react";
+import { CartContext } from "../../CartContext/CartContext";
+import './ItemList.css'
 
 const ItemList = ({ products }) => {
-  const [count, setCount] = useState(0)
-  const increment = () => {
+  const [count, setCount] = useState(1)
+  const { onAdd } = useContext(CartContext);
+
+  const setOnAdd = () => {
     setCount(count + 1)
-
+    onAdd(count)
   }
-  const decrement = () => {
-    setCount(count - 1)
-  }
-
 
   return (<>
 
-    <div style={{ width: "10rem" }}>
-      <h4>Stock {products.productName}</h4>
+    <div className="boxProducts" style={{ width: "10rem" }}>
+      <h4>Product {products.productName}</h4>
+      <h5>Price: $ {products.price}</h5>
       <img src={products.imageUrl} className="card-img-top" width="150" height="150" alt="..." />
-      <Button className="btn-dark" onClick={increment} disabled={count >= products.stock} >+</Button>
-      <div className="">{count}</div>
-
-      <Button className="btn-dark" onClick={decrement} disabled={count < 1} >-</Button>
-      <div className="card-body">
-        {/* <ItemCount/> */}
-
-      </div>
+      <Button className="btn-dark" onClick={setOnAdd}  >Comprar</Button>
     </div>
   </>
   )

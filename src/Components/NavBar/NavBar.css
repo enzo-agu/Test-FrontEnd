@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Island+Moments&family=Roboto+Mono&display=swap');
+
+div{
+    margin-top: 60px;
+}
+.CardWidget{
+    display: flex;  flex-direction: row; 
+    justify-content: flex-end;
+    margin-right: 60px;
+ 
+}
+.titleCardWidget{
+    margin-right: 80%;
+}
+h2{
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(22, 21, 21);
+}

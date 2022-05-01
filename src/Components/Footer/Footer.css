@@ -1,0 +1,26 @@
+form{
+    display:block;
+    margin:100px 0px 0px 40px;
+}
+
+form button{
+ 
+    border: solid 1px black;
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+
+}
+form input{
+  margin-left: 10px;
+}
+
+.divForm{
+    
+    margin:100px 100px 100px 40px;
+    padding: 50px 50px 10% 50px;
+    border: solid 1px black;
+    background-color: black;
+    color: white;
+
+}
