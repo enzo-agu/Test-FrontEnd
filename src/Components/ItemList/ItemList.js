@@ -19,6 +19,8 @@ const ItemList = ({ products }) => {
       <h5>Price: $ {products.price}</h5>
       <img src={products.imageUrl} className="card-img-top" width="150" height="150" alt="..." />
       <Button className="btn-dark" onClick={()=>{setOnAdd(currentState=>currentState+1 )}}  >Comprar</Button>
+      <Button className="btn-dark" onClick={()=>{setOnAdd(currentState=>currentState+1 )}}  >Comprar</Button>
+
     </div>
   </>
   )
