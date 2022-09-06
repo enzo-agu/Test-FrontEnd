@@ -9,7 +9,6 @@ const ItemList = ({ products }) => {
   const { onAdd } = useContext(CartContext);
 
   const setOnAdd = () => {
-    setCount(count + 1)
     onAdd(count)
   }
 
@@ -19,7 +18,7 @@ const ItemList = ({ products }) => {
       <h4>Product {products.productName}</h4>
       <h5>Price: $ {products.price}</h5>
       <img src={products.imageUrl} className="card-img-top" width="150" height="150" alt="..." />
-      <Button className="btn-dark" onClick={setOnAdd}  >Comprar</Button>
+      <Button className="btn-dark" onClick={()=>{setOnAdd(currentState=>currentState+1 )}}  >Comprar</Button>
     </div>
   </>
   )
